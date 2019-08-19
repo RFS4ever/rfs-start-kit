@@ -1,0 +1,30 @@
+{
+  "name": "rfs-start-kit",
+  "version": "1.0.0",
+  "description": "My javascript dev start kit.",
+  "dependencies": {},
+  "devDependencies": {
+    "husky": "^3.0.4",
+    "lint-staged": "^9.2.3",
+    "prettier": "^1.18.2"
+  },
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RFS4ever/rfs-start-kit.git"
+  },
+  "author": "rfs",
+  "license": "MIT",
+  "private": true,
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx,mjs,ts,tsx,css,less,scss,json,graphql,md,vue,yaml,html}": [
+      "prettier --write",
+      "git add"
+    ]
+  }
+}
